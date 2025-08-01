@@ -1,0 +1,323 @@
+/* Forest Theme Styles */
+
+/* Base & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #374151; /* Dark Gray */
+    background-color: #fdfdfd; /* Off-white */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 999px;
+    padding: 0.5rem 0.75rem;
+    width: auto;
+    max-width: 95%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .container {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    padding-right: 1rem;
+}
+
+.nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #4b5563; /* Medium Gray */
+    font-weight: 600;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+}
+
+.nav-link:hover {
+    color: #ea580c; /* Burnt Orange */
+    background-color: rgba(234, 88, 12, 0.05);
+}
+
+/* Main content */
+.main {
+    margin-top: 120px;
+}
+
+/* Hero section */
+.hero {
+    background-color: #fdfdfd;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-content-new {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-intro {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937; /* Very Dark Gray */
+}
+
+.hero-specialization {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.hero-tagline {
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+    color: #9ca3af; /* Light Gray */
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Projects section */
+.projects {
+    padding: 5rem 0;
+    background: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.year-section {
+    margin-bottom: 4rem;
+}
+
+.year-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #c2410c; /* Dark Burnt Orange */
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb; /* Lightest Gray */
+}
+
+.projects-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+
+/* Project cards */
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e5e7eb;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0,0,0,0.05);
+    border-color: #fed7aa; /* Light Orange */
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+}
+
+.project-image {
+    flex: 0 0 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.project-image iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: transform 0.4s ease-out;
+}
+
+.project-image .gif-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image img,
+.project-card:hover .project-image iframe {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image .gif-overlay {
+    opacity: 1;
+}
+
+.project-content {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.tag {
+    background: #f3f4f6; /* Lighter Gray */
+    color: #4b5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* About & Contact sections */
+.about, .contact {
+    padding: 5rem 0;
+    background: #fdfdfd;
+}
+
+.about-content, .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p, .contact-content p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #c2410c; /* Dark Burnt Orange */
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #fed7aa; /* Light Orange */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: #c2410c; /* Dark Burnt Orange */
+    color: #ffffff;
+    border-color: #c2410c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(194, 65, 12, 0.2);
+}
+
+/* Footer */
+.footer {
+    background: #ffffff;
+    color: #9ca3af;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-illustration svg {
+    display: block;
+    color: #d1d5db; /* Lightest Gray */
+}
+.footer-illustration path {
+    stroke: #8696a0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        height: auto;
+    }
+    .project-image {
+        flex: none;
+        height: 200px;
+    }
+} 

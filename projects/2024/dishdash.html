@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishDash - Kam's Portfolio</title>
+    <link rel="stylesheet" href="../../project-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../../index.html"><img src="../../logo.png" alt="Kamil Czarnecki Logo" class="logo"></a>
+            <nav class="nav">
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#about" class="nav-link">About</a>
+                <a href="../../index.html#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <article class="project-detail">
+            <div class="container">
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-year">2024</span>
+                        <span class="project-category">Game Jam</span>
+                    </div>
+                    <h1 class="project-title">DishDash</h1>
+                    <div class="project-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">GameJam</span>
+                    </div>
+                </header>
+
+                <div class="project-hero">
+                    <div class="project-image">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <section class="project-overview">
+                        <h2>Overview</h2>
+                        <p>DishDash is a chaotic cooking game where players race against time to prepare and serve dishes, featuring multiplayer mechanics and fast-paced gameplay. Created during a game jam, this project demonstrates efficient development practices and engaging multiplayer design.</p>
+                        <p>The game combines frantic cooking mechanics with strategic resource management, creating an exciting experience that's perfect for both solo play and multiplayer sessions.</p>
+                    </section>
+
+                    <section class="project-features">
+                        <h2>Key Features</h2>
+                        <ul>
+                            <li>Multiplayer Cooking: Real-time multiplayer gameplay with up to 4 players</li>
+                            <li>Dynamic Kitchen Management: Manage multiple cooking stations and ingredient supplies</li>
+                            <li>Time Pressure Mechanics: Race against the clock to fulfill customer orders</li>
+                            <li>Procedural Recipes: Random recipe generation ensures replayability</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-technical">
+                        <h2>Technical Implementation</h2>
+                        <p>This Unity-based project showcases efficient networking implementation and real-time multiplayer synchronization within the constraints of a game jam.</p>
+                        
+                        <h3>Technologies Used</h3>
+                        <ul>
+                            <li><strong>Engine:</strong> Unity 2022.3 LTS</li>
+                            <li><strong>Language:</strong> C#</li>
+                            <li><strong>Networking:</strong> Unity Netcode for GameObjects</li>
+                            <li><strong>Tools:</strong> Visual Studio, Unity Editor, Git</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-challenges">
+                        <h2>Challenges & Solutions</h2>
+                        <div class="challenge">
+                            <h3>Multiplayer Synchronization</h3>
+                            <p>Ensuring smooth multiplayer gameplay with real-time cooking mechanics and inventory management.</p>
+                            <h4>Solution</h4>
+                            <p>Implemented Unity's Netcode for GameObjects with custom synchronization for cooking states and inventory. Used authoritative server architecture to prevent cheating and ensure consistent gameplay.</p>
+                        </div>
+                        
+                        <div class="challenge">
+                            <h3>Performance Optimization</h3>
+                            <p>Maintaining smooth performance with multiple players, real-time physics, and complex cooking mechanics.</p>
+                            <h4>Solution</h4>
+                            <p>Optimized asset loading and implemented object pooling for frequently spawned items. Used Unity Profiler to identify bottlenecks and optimize rendering and physics calculations.</p>
+                        </div>
+                    </section>
+
+                    <section class="project-gallery">
+                        <h2>Gallery</h2>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://placehold.co/400x300/ea580c/ffffff?text=Kitchen+Scene" alt="Kitchen Scene">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://placehold.co/400x300/ea580c/ffffff?text=Multiplayer+Action" alt="Multiplayer Action">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://placehold.co/400x300/ea580c/ffffff?text=Cooking+Mechanics" alt="Cooking Mechanics">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="project-links">
+                        <h2>Links</h2>
+                        <div class="project-links-grid">
+                            <a href="#" class="project-link">GitHub Repository</a>
+                            <a href="#" class="project-link">Playable Demo</a>
+                            <a href="#" class="project-link">Game Jam Page</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                &copy; 2024 Kam's Portfolio. All rights reserved.
+            </div>
+            <div class="footer-illustration">
+                <svg width="200" height="40" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 40L200 40" stroke="#B0BEC5" stroke-width="1"/>
+                    <path d="M20 40V25L25 20L30 25V40" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M50 40V30L55 25L60 30V40" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M80 40V20L85 15L90 20V40" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M110 40V28L115 23L120 28V40" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M140 40V22L145 17L150 22V40" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M170 40V32L175 27L180 32V40" stroke="#5D4037" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../project-script.js"></script>
+</body>
+</html> 

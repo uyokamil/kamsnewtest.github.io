@@ -1,0 +1,16 @@
+{
+  "name": "kam-portfolio",
+  "version": "1.0.0",
+  "description": "Kam's Game Development Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "keywords": ["portfolio", "game-development", "web"],
+  "author": "Kam",
+  "license": "MIT"
+} 

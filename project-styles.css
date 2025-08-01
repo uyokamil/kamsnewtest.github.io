@@ -1,0 +1,361 @@
+/* Project Page Styles - Forest Theme */
+
+/* Base & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #374151;
+    background-color: #fdfdfd;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 999px;
+    padding: 0.5rem 0.75rem;
+    width: auto;
+    max-width: 95%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    padding-right: 1rem;
+}
+
+.nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 600;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+}
+
+.nav-link:hover {
+    color: #ea580c;
+    background-color: rgba(234, 88, 12, 0.05);
+}
+
+/* Main content */
+.main {
+    margin-top: 120px;
+}
+
+/* Project Detail */
+.project-detail {
+    padding: 2rem 0;
+}
+
+/* Project Header */
+.project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-year, .project-category {
+    background: #fed7aa;
+    color: #c2410c;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #f3f4f6;
+    color: #4b5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Project Hero */
+.project-hero {
+    margin-bottom: 4rem;
+}
+
+.project-hero .project-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.project-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-hero iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+}
+
+/* Project Content */
+.project-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-content section {
+    margin-bottom: 4rem;
+}
+
+.project-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.project-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-content p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.project-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.project-content li {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Features */
+.project-features ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-features li {
+    background: #f9fafb;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #ea580c;
+}
+
+/* Technical */
+.project-technical ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-technical li {
+    background: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+/* Challenges */
+.challenge {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #e5e7eb;
+}
+
+.challenge h3 {
+    color: #c2410c;
+    margin-top: 0;
+}
+
+.challenge h4 {
+    color: #ea580c;
+    margin-top: 1rem;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Project Links */
+.project-links-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #c2410c;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #fed7aa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.project-link:hover {
+    background: #c2410c;
+    color: #ffffff;
+    border-color: #c2410c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(194, 65, 12, 0.2);
+}
+
+/* Footer */
+.footer {
+    background: #ffffff;
+    color: #9ca3af;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-illustration svg {
+    display: block;
+    color: #d1d5db;
+}
+
+.footer-illustration path {
+    stroke: #8696a0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .project-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-links-grid {
+        flex-direction: column;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+} 
