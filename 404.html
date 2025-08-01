@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Kam's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script>
+        // GitHub Pages 404 routing
+        (function() {
+            const path = window.location.pathname;
+            
+            // Handle project URLs without .html extension
+            const projectMatch = path.match(/^\/projects\/(\d{4})\/([^\/]+)$/);
+            if (projectMatch) {
+                const year = projectMatch[1];
+                const project = projectMatch[2];
+                const newUrl = `/projects/${year}/${project}.html`;
+                window.location.href = newUrl;
+                return;
+            }
+            
+            // Handle root pages without .html extension
+            const rootMatch = path.match(/^\/([^\/]+)$/);
+            if (rootMatch && rootMatch[1] !== '') {
+                const page = rootMatch[1];
+                // Only redirect if it's not already an HTML file
+                if (!page.endsWith('.html')) {
+                    const newUrl = `/${page}.html`;
+                    window.location.href = newUrl;
+                    return;
+                }
+            }
+            
+            // If no match, show 404 page
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('not-found').style.display = 'block';
+            });
+        })();
+    </script>
+</head>
+<body>
+    <div id="loading" style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Nunito', sans-serif;">
+        <p>Redirecting...</p>
+    </div>
+    
+    <div id="not-found" style="display: none;">
+        <header class="header">
+            <div class="container">
+                <a href="index.html"><img src="logo.png" alt="Kamil Czarnecki Logo" class="logo"></a>
+                <nav class="nav">
+                    <a href="index.html#projects" class="nav-link">Projects</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content-new">
+                        <h2 class="hero-intro">Page Not Found</h2>
+                        <p class="hero-specialization">The page you're looking for doesn't exist.</p>
+                        <p class="hero-tagline">// back to the main portfolio</p>
+                        <a href="index.html" class="btn btn-primary" style="margin-top: 2rem;">Go Home</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html> 

@@ -119,17 +119,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     year = '2025';
                 }
                 
-                // Create clean URL
-                const cleanUrl = `projects/${year}/${project}`;
-                
-                // Try to navigate to clean URL
-                // If it fails, the server will handle the .html extension automatically
-                // thanks to the .htaccess file, or we'll get a 404 and can fallback
-                window.location.href = cleanUrl;
+                // Create URL with .html extension for GitHub Pages compatibility
+                const projectUrl = `projects/${year}/${project}.html`;
+                window.location.href = projectUrl;
             }
             // 2023 projects don't navigate anywhere - they just show the YouTube video
         });
     });
+
+
 });
 
 // Utility function to create project detail pages
